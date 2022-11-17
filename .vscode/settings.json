@@ -1,4 +1,7 @@
 {
     "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
     "editor.wordWrapColumn": 50,
+    "workbench.colorTheme": "GitHub Light"
 }
