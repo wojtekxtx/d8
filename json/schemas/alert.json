@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "alerts_schema",
+  "$comment": "Schema for alerts",
+  "properties": {
+    "alert": {
+      "properties": {
+        "alertID": {
+          "type": "integer",
+          "description": "ID of alert"
+        },
+        "alertName": {
+          "type": "string",
+          "description": "Name of the alert"
+        },
+        "alertSource": {
+          "description": "Source of the alert",
+          "enum": ["web", "DB", "POS", "SSHI", "Service", "System"]
+        },
+        "alertMessage":{
+            "type":"string",
+            "description": "Message body of the alert.",
+            "minLength":5,
+            "maxLength": 255
+        },
+        "Alerting server":{
+          "description": "Alerting server details",
+            "properties": {
+                "Name":{
+                    "type":"string",
+                    "description": "Server name"
+                },
+                "Web based access":{
+                    "type":"boolean"
+                },
+                "FQQDN":{
+                    "type":"string",
+                    "description": "Domain name"
+                },
+                "Port":{
+                    "type":"integer",
+                    "description": "Port number alerting mechanism listens on"
+                },
+                "CTI Public":{
+                    "type":"boolean"
+                }
+            }
+        }
+      }
+    }
+  }
+}

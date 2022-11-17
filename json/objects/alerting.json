@@ -1,0 +1,4 @@
+{
+  "$schema": "../schemas/alert.json",
+  "alert": {}
+}
