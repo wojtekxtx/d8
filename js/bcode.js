@@ -22,7 +22,7 @@ class GenericBarcode extends Barcode{
 	}
 
     scamable(){
-        if ((navigator.cookieEnabled) && (navigator.mediaDevices.getUserMedia('camera') && (document.getElementById('div-barcode')))){
+        if ((navigator.cookieEnabled) && (navigator.mediaDevices.getUserMedia('camera')) && (document.getElementById('div-barcode'))){
             document.getElementById('div-barcode').innerText(data);
         } else {
             console.log(err);
@@ -30,5 +30,4 @@ class GenericBarcode extends Barcode{
         }
     }
 }
-
 export {GenericBarcode};
