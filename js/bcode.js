@@ -1,9 +1,11 @@
 // Created with VSCode for Web inside GitHub CodeSpace
-// Created by: wojtekxtx
+// Created by: wojtekxtx.
+// NO COPIES/MODIFICATIONS ALLOWED
 
 class GenericBarcode extends Barcode{
 	constructor(data, options){
 		super(data, options); // Sets this.data and this.text
+		console.log("Data: "+data+" options: " +options);
 	}
 
 	// Return the corresponding binary numbers for the data provided
