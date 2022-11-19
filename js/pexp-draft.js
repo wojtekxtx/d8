@@ -1,5 +1,6 @@
 // This is heavy draft
 import { pass, passttl, passChars, minPasswordLength } from "passwdMngmtUnit";
+import { sanitize } from "./functions/sanitize";
 
 // Get password from password field
 pass = document.querySelector('input').value;
@@ -41,17 +42,3 @@ function setPwdExpirationDate(string){
     // Set desired PED
     pm.PasswordExpirationDate(ped);
 }
-
-// Sanitize password
-function sanitize(string) {
-    const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#x27;',
-        "/": '&#x2F;',
-    };
-    const reg = /[&<>"'/]/ig;
-    return string.replace(reg, (match)=>(map[match]));
-  }
