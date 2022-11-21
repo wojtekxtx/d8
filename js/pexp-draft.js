@@ -1,6 +1,7 @@
 // This is heavy draft
 import { pass, passttl, passChars, minPasswordLength } from "passwdMngmtUnit";
 import { sanitize } from "./functions/sanitize";
+import { setPwdExpirationDate } from "./functions/setPwdExpirationDate";
 
 // Get password from password field
 pass = document.querySelector('input').value;
@@ -28,17 +29,4 @@ if (passChars < minPasswordLength) {
 
     // set expiration date
     setPwdExpirationDate(pass);
-}
-
-function setPwdExpirationDate(string){
-
-    // Calculate PED
-    let d = new Date();
-    let ped = d.setDate(d.getDate()+10);
-
-    // Instantise Password Managerial Unit (PMU)
-    pm = new passwordMngmt();
-
-    // Set desired PED
-    pm.PasswordExpirationDate(ped);
 }
