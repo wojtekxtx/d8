@@ -4,9 +4,10 @@ function inputFieldsClear() {
 
 function createDiv(){
     document.createElement('div');
-    // console.log("DIV created");
     document.getElementById('div').style.display = 'block';
 }
 
-function setSize(){
+function setDivDefaultSize(){
+    document.getElementById('div').style.height = 'auto';
+    document.getElementById('div').style.width = '100%';
 }
